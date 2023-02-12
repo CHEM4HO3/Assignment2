@@ -44,7 +44,6 @@ means = zeros(1,size(2)-2);
 stds = zeros(1,size(2)-2);
 data_cs(:, 1:2) = data (:, 1:2);
 for i = 3:size(2)
-    titles(i)
     col_mean = mean(data (:, i));
     col_std = std(data (:, i));
     means(i-2) = col_mean;

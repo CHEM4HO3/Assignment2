@@ -35,7 +35,7 @@ for a =1:A
     
     res_x(:,:,a) = x;
     
-    R2(a) = 1 - nansum(nansum(x.*x))./nansum(nansum(x0.*x0)); % Find cummulative R2 for each component
+    R2(a) = 1 - sum(sum(x.*x, "omitnan"),"omitnan")./sum(sum(x0.*x0, "omitnan"),"omitnan"); % Find cummulative R2 for each component
 end
 
 
