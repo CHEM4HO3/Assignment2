@@ -21,17 +21,10 @@ for i = 3:size(2)
 end
 
 x = data_cs(:, 3:9);
+
 [t,p,R2] = nipalspca(x, 3);
+p
 R2
-
-clr = hsv(10);
-figure
-gscatter(t(:,1), t(:,2),data(:,1),clr,'o+*.xsd^v>')
-title("Score Plot of Pizza By Brand")
-xlabel('First Score t_1');
-ylabel('Second Score t_2');
-
-figure
-titles(3:9)
-a = ["a", "b", "c", "d", "e", "f", "g"]
-bar(string(titles(3:9)),p(:,1:2))
+[t_2,p_2,R2_2] = eigen_pca(x, 3);
+p_2
+R2_2
