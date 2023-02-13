@@ -16,5 +16,6 @@ function [T, P, R2] = eigen_pca(X, num_components)
     
     % Compute R2 values
     total_var = sum(sorted_eigenvals);
-    R2 = sorted_eigenvals(1:num_components) / total_var;
+    R2 = cumsum(sorted_eigenvals(1:num_components) / total_var)';
+
 end
