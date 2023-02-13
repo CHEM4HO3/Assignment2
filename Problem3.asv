@@ -1,4 +1,4 @@
-close all;
+% close all;
 clear;
 clc;
 
@@ -8,7 +8,8 @@ data = raw.data;
 titles = raw.textdata;
 
 x = data(:, 3:9);
-[t,p,R2] = nipalspca(x, 3);
+[t,p,R2] = ni(x, 3);
+R2
 
 clr = hsv(10);
 figure

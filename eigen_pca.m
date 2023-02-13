@@ -3,8 +3,7 @@ function [T, P, R2] = eigen_pca(X, num_components)
     X = (X - mean(X)) ./ std(X);
     
     % Compute covariance matrix and eigenvalue decomposition
-    cov_mat = cov(X);
-    [eigenvecs, eigenvals] = eig(cov_mat);
+    [eigenvecs, eigenvals] = eig(X.'*X);
     
     % Sort eigenvalues in descending order and select top num_components eigenvectors
     [sorted_eigenvals, sorted_indices] = sort(diag(eigenvals), 'descend');
