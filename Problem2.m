@@ -57,4 +57,10 @@ title("Fat vs Protein");
 xlabel("Fat per 100g (g)");
 ylabel("Protein per 100 grams (g)")
 
+figure
+scatter(data_cs(:,5),data_cs(:,4));
+title("Fat vs Protein (Centred and scaled)");
+xlabel("Fat per 100g (g)");
+ylabel("Protein per 100 grams (g)")
+
 
